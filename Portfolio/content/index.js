@@ -2,11 +2,17 @@
 $(document).ready(function(){
 
     /* ABOUT ME: TABS */
-    var tabLinks = document.getElementsByClassName("aboutme-tab-links");
-    var tabContents = document.getElementsByClassName("aboutme-tab-contents");
-    
+    ///On Function Click
+    $(".aboutme-tab-links").click(function() {
+        let clickedTab = $(this).attr("id");                  //Get the current id of the clicked tab 
+        OpenTab(`#${clickedTab}`, `#${clickedTab}-content`); //Use the id to Open the desired tab
+    })
+
     ///Open Tab///
     function OpenTab(tabname, contentname) {
+        var tabLinks = document.getElementsByClassName("aboutme-tab-links");
+        var tabContents = document.getElementsByClassName("aboutme-tab-contents");
+
         //De-activate all other classes
         for (tabLink of tabLinks) {
             $(tabLink).removeClass("active-link");
@@ -20,12 +26,33 @@ $(document).ready(function(){
         $(tabname).addClass("active-link");
     }
 
-    ///On Function Click
-    $(".aboutme-tab-links").click(function() {
-        let clickedTab = $(this).attr("id");                  //Get the current id of the clicked tab 
-        OpenTab(`#${clickedTab}`, `#${clickedTab}-content`); //Use the id to Open the desired tab
-    })
 
+    
+    /* RETROSPECTIVE GALLERIES */
+        var focusedImageBox = document.getElementById("focusedImageBox");
+        var focusedImage = document.getElementById("focusedImage");
+
+    var modal = $(focusedImageBox);
+    $(".openFocusedImage").click(function() {
+        let clickedImg = this.src;
+
+        modal.css("display", "block");
+        $(focusedImage.setAttribute("src", clickedImg));
+    });
+
+    window.onclick = function(event) {
+        if (modal.css("display") != "none" && event.target == focusedImage) {
+            modal.css("display", "none");
+        }
+    };
+
+    /* To Do;
+     * - Close image by clicking outside
+     * - Center image 
+     * 
+     * event.target == $(body).on("click")
+     * event.target == focusedImage
+     */
 
 
     ///Smooth Scrolling ///

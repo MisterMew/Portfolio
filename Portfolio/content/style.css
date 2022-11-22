@@ -57,7 +57,7 @@ h4 {
 
 .line-divider {
     height: 2px;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     background-image: linear-gradient(90deg, #ff9700, #d72762);
 }
 
@@ -67,8 +67,15 @@ p {
     line-height: 1.25;
     text-align: left;
 }
+p.date {
+    font-size: 1rem;
+    color: #777;
+    text-align: center;
+    text-transform: uppercase;
+}
 p.bullet {
     color: #ff9700;
+    font-size: 1.1rem;
     font-weight: 400;
 }
 p.p-hero {
@@ -82,9 +89,70 @@ p.procard-details {
     font-weight: 700;
     text-transform: uppercase;
 }
-div .topic {
-    padding: 3rem;
+ul {
+    list-style-type: none;
+    font-size: 1.1rem;
 }
+li {
+    color: #999;
+    font-size: 1.1rem;
+}
+li::before {
+    content: '» ';
+    color: #ffb650;
+    font-size: 1.1rem;
+}
+
+
+
+/* DIVIDERS */
+div.topic {
+    padding: 3rem 6rem;
+}
+
+div.gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    grid-gap: 16px;
+}
+div.gallery img {
+    flex: 1 0;
+    width: 32%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+div.gallery img:hover {
+    transform: scale(1.015);
+    
+    box-shadow: 0px 0px 10px 0px #000000dd;
+    border-width: 4px;
+    border-radius: 8px;
+}
+
+div.img-focused {
+    display: none;
+    
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+div.img-focused img {
+    height: 50vh;
+}
+.modal-content {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+
 
 /* IMAGES */
 img.procard-banner {
@@ -96,10 +164,11 @@ img.procard-banner {
 }
 
 
+
 /* BODY */
 body {
-    margin-left: 8%;
-    margin-right: 8%;
+    margin: 8%;
+    margin-top: 0%;
     height: 100%;
     max-width: 1920px;
     display: flex;
@@ -109,8 +178,8 @@ body {
 
     opacity: 0.85;
     background-color: #000;
-    border-left: solid #000 16px;
-    border-right: solid #000 16px;
+    border: solid #000 16px;
+    border-top: none;
 }
 
 .button {
@@ -220,13 +289,10 @@ nav {
 }
 
 .section-divider {
-    top: auto;
     width: 100%;
-    right: 0%;
     bottom: -1px;
 
     position: absolute;
-    object-fit: cover;
 }
 
 
@@ -236,16 +302,21 @@ nav {
     width: 100%;
     height: 600px;
     display: flex;
-    padding: 3rem 3rem;
     align-items: center;
+    position: relative;
     
     background-image: url(../assets/images/img_fernBlack-unslpash.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-.section-hero main {
-    height: 100vh;
+.section-hero.project {
+    margin-top: 5rem;
+}
+.hero-background {
+    position: relative;
+    height: 100%;
+    width: 100%;
 }
 
 
@@ -266,9 +337,10 @@ nav {
 }
 .projects-previous {
     display: grid;
+    flex-wrap: wrap;
     grid-gap: 32px;
     padding: 3rem;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, max(100%/3)), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(32%, max(100%/3)), 1fr));
 }
 .project-card {
     padding: 1rem;
@@ -277,24 +349,25 @@ nav {
     position: relative;
     align-items: center;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: stretch;
+    flex: 1 0;
     
     transition: 0.3s;
 }
 .procard-content {
     padding: 1rem;
     display: flex;
-    align-items: flex-start;
+    align-items: stretch;
     flex-direction: column;
     justify-content: flex-start;
-    flex: 1 0 auto;
+    flex: 1 0;
 }
 .procard-buttons {
     width: 100%;
     display: flex;
     align-self: center;
     align-items: center;
-    margin: 1rem 0;
+    margin: 3rem 0;
     flex-direction: row;
     justify-content: center;
 }
@@ -364,3 +437,11 @@ nav {
 
 
 /* FOOTER */
+footer {
+    width: 100%;
+    height: 10vh;
+    bottom: 0;
+    z-index: 999;
+    position: relative;
+    align-content: center;
+}
