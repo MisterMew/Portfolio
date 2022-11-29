@@ -10,7 +10,7 @@
 }
 
 html {
-    background: black url(../assets/images/img_diagonals.png) repeat center center fixed;
+    background: black url(assets/images/img_diagonals.png) repeat center center fixed;
     background-size: none;
     box-shadow: 0 99999px rgba(0, 0, 0, 0.96) inset;
 }
@@ -18,7 +18,7 @@ html {
 /* FONTS AND TEXT */
 @font-face {
     font-family: 'Quicksand';
-    src: url(../assets/fonts/Quicksand/Quicksand-VariableFont_wght.ttf);
+    src: url(assets/fonts/Quicksand/Quicksand-VariableFont_wght.ttf);
 }
 
 h1 {
@@ -305,7 +305,7 @@ nav {
     align-items: center;
     position: relative;
     
-    background-image: url(../assets/images/img_fernBlack-unslpash.jpg);
+    background-image: url(assets/images/img_fernBlack-unslpash.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
