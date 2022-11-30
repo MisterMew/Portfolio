@@ -10,9 +10,9 @@
 }
 
 html {
-    background: black url(assets/images/img_diagonals.png) repeat center center fixed;
+    background: #201f1c url(assets/images/img_diagonals.png) repeat center center fixed;
     background-size: none;
-    box-shadow: 0 99999px rgba(0, 0, 0, 0.96) inset;
+    box-shadow: 0 99999px rgba(0, 0, 0, 0.94) inset;
 }
 
 /* FONTS AND TEXT */
@@ -55,6 +55,11 @@ h4 {
     margin-bottom: 1.5rem;
 }
 
+hr {
+    border: 0;
+    border-bottom: solid 2px rgba(255, 255, 255, 0.1);
+    margin: 2em 0;
+}
 .line-divider {
     height: 2px;
     margin-bottom: 1rem;
@@ -94,8 +99,10 @@ ul {
     font-size: 1.1rem;
 }
 li {
+    display: list-item;
     color: #999;
     font-size: 1.1rem;
+    margin: .25em 0;
 }
 li::before {
     content: '» ';
@@ -109,8 +116,34 @@ li::before {
 div.topic {
     padding: 3rem 6rem;
 }
+div.topic p {
+    text-align: justify;
+}
+div.topic-row {
+    display: flex;
+    flex-direction: row;
+    padding: 1.5rem 0;
+}
+div.topic-row img {
+    max-width: 384px;
+    margin-right: 2rem;
+
+    border-radius: 12px;
+    box-shadow: 5px 5px 10px 0px #000000dd;
+}
+@media(max-width: 1500px) {
+    div.topic-row {
+        flex-wrap: wrap;
+    }
+    div.topic-row img {
+        margin-bottom: 2rem;
+    }
+}
 
 div.gallery {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -125,7 +158,7 @@ div.gallery img {
     transition: 0.3s;
 }
 div.gallery img:hover {
-    transform: scale(1.015);
+    transform: scale(1.05);
     
     box-shadow: 0px 0px 10px 0px #000000dd;
     border-width: 4px;
@@ -161,6 +194,15 @@ img.procard-banner {
     object-fit: cover;
     border: 4px solid #000;
     box-shadow: 5 5 24 0 0;
+    transition: 0.3s;
+}
+img.procard-banner:hover {
+    transition: 0.3s;
+    transform: scale(1.045);
+    box-shadow: 0px 0px 32px 0px #000000;
+    border-color: rgb(0, 0, 0);
+    border-width: 2px;
+    border-radius: 5px;
 }
 
 
@@ -177,7 +219,7 @@ body {
     flex-direction: column;
 
     opacity: 0.85;
-    background-color: #000;
+    background-color: rgb(28, 26, 23);
     border: solid #000 16px;
     border-top: none;
 }
@@ -186,9 +228,7 @@ body {
     width: 20rem;
     height: 3rem;
     display: flex;
-    align-self: center;
     align-items: center;
-    flex-direction: row;
     justify-content: center;
     margin: 1rem .5rem;
     
@@ -204,9 +244,11 @@ body {
     text-transform: uppercase;
     text-decoration: none;
 
-    transition: 0.1s;
+    transition: 0.3s;
 }
 .button:hover {
+    transition: 0.3s;
+    transform: scale(1.025);
     box-shadow: 0px 0px 10px 0px rgba(133, 220, 255, 0.5);
     border-color: #85dcffff;
     border-width: 2px;
@@ -310,13 +352,53 @@ nav {
     background-position: center;
     background-size: cover;
 }
-.section-hero.project {
-    margin-top: 5rem;
-}
 .hero-background {
     position: relative;
     height: 100%;
     width: 100%;
+}
+.section-hero.project {
+    margin-top: 5rem;
+    transition: 0.3s;
+
+    overflow: hidden;
+}
+.section-hero.project:hover img {
+    transition: 0.3s;
+    filter: blur(2px);
+}
+.section-hero figcaption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    
+    text-shadow: 0 4px 0 rgb(0, 0, 0);
+    box-shadow: 0 0 2px rgba(0,0,0,0.2);
+    background: rgba(0, 0, 0, 0.6);
+    padding: 6rem;
+    opacity: 0;
+    transform: scale(1.15);
+    transition: 0.2s;
+}
+.section-hero figcaption h1 {
+    margin-top: 6rem;
+    font-variant: small-caps;
+}
+.section-hero figcaption p {
+    text-align: center;
+}
+.section-hero:hover img,
+.section-hero:focus img,
+.section-hero:active img {
+    filter: blur(3px);
+}
+.section-hero:hover figcaption,
+.section-hero:focus figcaption,
+.section-hero:active figcaption {
+    opacity: 1;
+    transform: none;
 }
 
 
@@ -327,7 +409,7 @@ nav {
 
     padding: 3rem 3rem;
     
-    background-image: linear-gradient(180deg, rgb(0, 0, 0) 0.00%, rgb(8, 8, 8) 80.00%, rgb(14, 14, 14) 100.00%);
+    background-image: linear-gradient(180deg, #000000 0.00%, rgb(28, 26, 23) 100.00%);
 }
 
 .projects-current {
@@ -342,6 +424,12 @@ nav {
     padding: 3rem;
     grid-template-columns: repeat(auto-fit, minmax(min(32%, max(100%/3)), 1fr));
 }
+@media(max-width: 1200px) {
+    .projects-previous {
+        grid-template-columns: none;
+    }
+}
+
 .project-card {
     padding: 1rem;
     min-width: 32%;
@@ -351,8 +439,12 @@ nav {
     flex-direction: column;
     justify-content: stretch;
     flex: 1 0;
-    
+    background-image: linear-gradient(180deg, #00000075, #00000000 100.00%);
     transition: 0.3s;
+}
+.project-card:hover {
+    transition: 0.3s;
+    transform: scale(1.025);
 }
 .procard-content {
     padding: 1rem;
@@ -444,4 +536,13 @@ footer {
     z-index: 999;
     position: relative;
     align-content: center;
+}
+
+a.toTop {
+    display: block;
+    margin-top: 2rem;
+    color: #d27c0a;
+    font-size: 1.5rem;
+    font-variant: small-caps;
+    text-align: center;
 }

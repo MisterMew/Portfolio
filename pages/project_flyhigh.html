@@ -16,7 +16,7 @@
             <div class="nav-items">
                 <a href="#top" class="nav-item-link title">JAZMIN FAZZOLARI</a>
                 <nav>
-                        <a href="../_index.html" class="nav-item-link">〈 HOME</a>
+                        <a href="../index.html" class="nav-item-link">〈 HOME</a>
                 </nav>
             </div>
             <ul class="nav-icons">
@@ -48,6 +48,7 @@
                 <a href="https://github.com/Fly-High-Fishing/Fly-High-Fishing" class="button">🔗Source code</a>
                 <a href="https://flyhighfishing.itch.io/fly-high-fishing" class="button">Download Game</a>
             </div>
+            <!-- Section 1 -->
             <div class="topic">
                 <h3>PROJECT DETAILS</h3>
                 <ul>
@@ -57,8 +58,10 @@
                     <li><b>Completion Date:</b> July 08, 2022</li>
                 </ul>
             </div>
+            <hr>
             <div class="topic">
-                <h3>DESCRIPTION</h3>
+                <h3>OVERVIEW</h3>
+                <h4>Description</h4>
                 <p>
                     Fly-high Fishing was developed by a team of nine students over the course of 4 weeks. 
                     <br>
@@ -66,7 +69,7 @@
                 </p>
             </div>
             <div class="topic">
-                <h3>CONTRIBUTIONS</h3>
+                <h4>Contributions</h4>
                 <ul>
                     <li>GUI design and functionality</li>
                     <li>Scene transitions, animations and crossfade sequences</li>
@@ -76,7 +79,7 @@
                 <p></p>
             </div>
             <div class="topic">
-                <h3>CHALLENGES</h3>
+                <h4>Challenges</h4>
                 <p>
                     One of the biggest challenges that we as a team had to overcome was limited access to the Oculus Quest 2. 
                     <br>
@@ -84,21 +87,52 @@
                 </p>
             </div>
             <div class="topic">
-                <h3>FUTURE CONSIDERATIONS</h3>
+                <h4>Future Considerations</h4>
                 <p></p>
             </div>
+            <hr>
+            <!-- Section 2 -->
+            <div class="topic">
+                <h3>ABOUT THE CODE</h3>
+                <div class="topic-row">
+                        <img src="../assets/images/projects/_flyhigh/flyhigh_boids.gif">
+                    <div>
+                        <h4>Artificial Intelligence</h4>
+                        <p>The first thing I did was get started on the artificial intelligence for the fish. I used a boid system I had previously created in unity as the foundation to save time, tweaked it to better accommodate the project, and ensured all necessary values were either exposed or hidden to allow designers to fine-tune the AI if they so desired.
+                            <br><br>
+                            It didn't take me long to setup the AI with some place-holder cubes, they moved around the scene freely and in groups and would avoid the balloon and player.
+                        </p>
+                    </div>
+                </div>
+                <div class="topic-row">
+                    <img src="../assets/images/projects/_flyhigh/flyhighfishing_optionsmenu.png">
+                    <div>
+                        <h4>User Interface</h4>
+                        <p>Once I had set up the AI prototypes within our testing scenes, I moved on to handling the UI. This was the first time I had to create UI within a world space, the first issue I encountered was the different elements not scaling correctly. The best way I could fix this was by setting the transform scale to 0.001.
+                            <br><br>
+                            I then got started on designing the different UI menu's.
+                            <br><br>
+                            Finally, I helped our UI artist to apply the created assets to all the menus, repositioned a few elements to better suit the style and updated all fonts to be OpenDyslexic.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <hr>
             <div class="img-focused" id="focusedImageBox">
                 <div class="modal-content">
                     <img id="focusedImage" src="../assets/images/img_fernBlack-unslpash.jpg">
                 </div>
             </div>
+            <h3>IMAGE GALLERY</h3>
             <div class="gallery">
                 <img class="openFocusedImage" src="../assets/images/projects/_flyhigh/flyhighfishing_mainmenu.png">
-                <img class="openFocusedImage" src="../assets/images/projects/_flyhigh/flyhighfishing_optionsmenu.png">
-                <img class="openFocusedImage" src="../assets/images/projects/_flyhigh/flyhighfishing_wristwatch.png">
+                <img class="openFocusedImage" src="../assets/images/projects/_flyhigh/flyhigh_bow.gif">
+                <img class="openFocusedImage" src="../assets/images/projects/_flyhigh/flyhighfishing_wristwatch2.png">
                 <img class="openFocusedImage" src="../assets/images/projects/_flyhigh/flyhighfishing__screenshot_01.png">
             </div>
         </div>
+        <hr>
+        <a href="#top" class="toTop"> back to top </a>
     </section>
     <script src="../index.js"></script>
 </body>
