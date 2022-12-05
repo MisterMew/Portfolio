@@ -10,9 +10,9 @@
 }
 
 html {
-    background: #201f1c url(assets/images/img_diagonals.png) repeat center center fixed;
+    background: #000000 url(assets/images/img_diagonals.png) repeat center center fixed;
     background-size: none;
-    box-shadow: 0 99999px rgba(0, 0, 0, 0.94) inset;
+    box-shadow: 0 99999px rgba(20, 20, 20, 0.96) inset;
 
     display: flex;
     justify-content: center;
@@ -108,7 +108,7 @@ li {
     font-size: 1.1rem;
     margin: .25em 0;
 }
-li::before {
+li.bullet::before {
     content: '» ';
     color: #ffb650;
     font-size: 1.1rem;
@@ -133,6 +133,9 @@ div.topic {
 }
 div.topic p {
     text-align: justify;
+}
+div.topic ul {
+    margin-bottom: 1.5rem;
 }
 div.topic-row {
     display: flex;
@@ -278,8 +281,9 @@ body {
     align-items: center;
     padding: 32px 48px;
     justify-content: center;
+
     background-color: transparent;
-    background-image: linear-gradient(180deg, #000, #000 67%, rgba(0, 0, 0, 0.27) 94%, transparent)
+    background-image: linear-gradient(180deg, #000, #000 67%, rgba(0, 0, 0, 0.27) 94%, transparent);
 }
 .nav-items {
     width: 100%;
@@ -396,14 +400,14 @@ nav {
 .section-hero figcaption p {
     text-align: center;
 }
-.section-hero:hover img,
-.section-hero:focus img,
-.section-hero:active img {
+.section-hero .hero-background:hover img,
+.section-hero .hero-background:focus img,
+.section-hero .hero-background:active img {
     filter: blur(3px);
 }
-.section-hero:hover figcaption,
-.section-hero:focus figcaption,
-.section-hero:active figcaption {
+.section-hero .hero-background:hover figcaption,
+.section-hero .hero-background:focus figcaption,
+.section-hero .hero-background:active figcaption {
     opacity: 1;
     transform: none;
 }
@@ -418,6 +422,7 @@ nav {
     justify-content: center;
 
     background-color: #000;
+    text-align: center;
 }
 
 
@@ -428,7 +433,7 @@ nav {
 
     padding: 3rem 3rem;
     
-    background-image: linear-gradient(180deg, #000000 0.00%, rgb(28, 26, 23) 100.00%);
+    background-color: #1b1a17;
 }
 
 .projects-current {
