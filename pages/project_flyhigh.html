@@ -5,7 +5,7 @@
     <meta charset="UTF=8">
     <meta http-equiv="X-UA-Compatible" content="IE=chrome">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Jazmin Fazzolari - VR Fly High Bowfishing</title>       
+    <title> Jazmin Fazzolari - VR Fly High Bowfishing</title>
     <link rel="stylesheet" href="../style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
@@ -16,20 +16,42 @@
             <div class="nav-items">
                 <a href="#top" class="nav-item-link title">JAZMIN FAZZOLARI</a>
                 <nav>
-                        <a href="../index.html" class="nav-item-link">〈 HOME</a>
+                    <a href="../index.html" class="nav-item-link">〈 HOME</a>
                 </nav>
             </div>
             <ul class="nav-icons">
                 <a href="../assets/documents/JazminFazzolari_Resume.pdf" target="_blank">
-                <img class="nav-icon" src="../assets/images/icons/favicon_resume.png">
+                    <img class="nav-icon" src="../assets/images/icons/favicon_resume.png">
                 </a>
                 <a href="https://mistermew.itch.io/" target="_blank">
-                <img class="nav-icon" src="../assets/images/icons/favicon_itchio.png">
+                    <img class="nav-icon" src="../assets/images/icons/favicon_itchio.png">
                 </a>
                 <a href="https://github.com/MisterMew" target="_blank">
-                <img class="nav-icon" src="../assets/images/icons/favicon_github.png">
+                    <img class="nav-icon" src="../assets/images/icons/favicon_github.png">
                 </a>
             </ul>
+            <div class="nav-dropdown">
+                <i class="fa-solid fa-bars" style="font-size:48px;color:white;"></i>
+                <div class="nav-dropdown-content">
+                    <ul class="nav-icons" id="dropdown-icons">
+                        <a href="./assets/documents/JazminFazzolari_Resume.pdf" target="_blank">
+                            <img class="nav-icon" src="./assets/images/icons/favicon_resume.png">
+                        </a>
+                        <a href="https://mistermew.itch.io/" target="_blank">
+                            <img class="nav-icon" src="./assets/images/icons/favicon_itchio.png">
+                        </a>
+                        <a href="https://github.com/MisterMew" target="_blank">
+                            <img class="nav-icon" src="./assets/images/icons/favicon_github.png">
+                        </a>
+                        <a href="https://www.linkedin.com/in/jazmin-fazzolari-26540b227/" target="_blank">
+                            <img class="nav-icon" src="./assets/images/icons/favicon_linkedin.png">
+                        </a>
+                        <a href="#" target="_blank">
+                            <img class="nav-icon" src="./assets/images/icons/favicon_email.png">
+                        </a>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -41,7 +63,7 @@
     <!-- SECTION: RETROSPECTIVE -->
     <section class="section-projects">
         <div class="section-container">
-            <h2>RETROSPECTIVE [W.I.P]</h2>
+            <h2>RETROSPECTIVE</h2>
             <div class="line-divider"></div>
             <p class="date">July 25, 2022</p>
             <div class="procard-buttons">
@@ -63,9 +85,10 @@
                 <h3>OVERVIEW</h3>
                 <h4>Description</h4>
                 <p>
-                    Fly-high Fishing was developed by a team of nine students over the course of 4 weeks. 
+                    Fly-high Fishing was developed by a team of nine students over the course of 4 weeks.
                     <br>
-                    This was for our Virtual and Extended Realities subject where we were required to produce a game together for the Oculus Quest 2.
+                    This was for our Virtual and Extended Realities subject where we were required to produce a game
+                    together for the Oculus Quest 2.
                 </p>
             </div>
             <div class="topic">
@@ -81,9 +104,11 @@
             <div class="topic">
                 <h4>Challenges</h4>
                 <p>
-                    One of the biggest challenges that we as a team had to overcome was limited access to the Oculus Quest 2. 
+                    One of the biggest challenges that we as a team had to overcome was limited access to the Oculus
+                    Quest 2.
                     <br>
-                    Only two members had access to the VR headset, making it difficult to test and build as we had to wait for our schedules to line up.
+                    Only two members had access to the VR headset, making it difficult to test and build as we had to
+                    wait for our schedules to line up.
                 </p>
             </div>
             <div class="topic">
@@ -95,12 +120,16 @@
             <div class="topic">
                 <h3>ABOUT THE CODE</h3>
                 <div class="topic-row">
-                        <img src="../assets/images/projects/flyhigh/flyhigh_boids.gif">
+                    <img src="../assets/images/projects/flyhigh/flyhigh_boids.gif">
                     <div>
                         <h4>Artificial Intelligence</h4>
-                        <p>The first thing I did was get started on the artificial intelligence for the fish. I used a boid system I had previously created in unity as the foundation to save time, tweaked it to better accommodate the project, and ensured all necessary values were either exposed or hidden to allow designers to fine-tune the AI if they so desired.
+                        <p>The first thing I did was get started on the artificial intelligence for the fish. I used a
+                            boid system I had previously created in unity as the foundation to save time, tweaked it to
+                            better accommodate the project, and ensured all necessary values were either exposed or
+                            hidden to allow designers to fine-tune the AI if they so desired.
                             <br><br>
-                            It didn't take me long to setup the AI with some place-holder cubes, they moved around the scene freely and in groups and would avoid the balloon and player.
+                            It didn't take me long to setup the AI with some place-holder cubes, they moved around the
+                            scene freely and in groups and would avoid the balloon and player.
                         </p>
                     </div>
                 </div>
@@ -108,11 +137,15 @@
                     <img src="../assets/images/projects/flyhigh/flyhighfishing_optionsmenu.png">
                     <div>
                         <h4>User Interface</h4>
-                        <p>Once I had set up the AI prototypes within our testing scenes, I moved on to handling the UI. This was the first time I had to create UI within a world space, the first issue I encountered was the different elements not scaling correctly. The best way I could fix this was by setting the transform scale to 0.001.
+                        <p>Once I had set up the AI prototypes within our testing scenes, I moved on to handling the UI.
+                            This was the first time I had to create UI within a world space, the first issue I
+                            encountered was the different elements not scaling correctly. The best way I could fix this
+                            was by setting the transform scale to 0.001.
                             <br><br>
                             I then got started on designing the different UI menu's.
                             <br><br>
-                            Finally, I helped our UI artist to apply the created assets to all the menus, repositioned a few elements to better suit the style and updated all fonts to be OpenDyslexic.
+                            Finally, I helped our UI artist to apply the created assets to all the menus, repositioned a
+                            few elements to better suit the style and updated all fonts to be OpenDyslexic.
                         </p>
                     </div>
                 </div>
@@ -139,4 +172,5 @@
 
     <script src="../index.js"></script>
 </body>
+
 </html>

@@ -7,6 +7,7 @@ To Do;
 > Populate Project: HotF with retrospective content
 > Change bg. gradient to flat colour w/ transparency, add gradient to titles only
 > Create about me section
+> Add email/contact icon
 
 
 

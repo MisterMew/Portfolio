@@ -5,34 +5,55 @@
     <meta charset="UTF=8">
     <meta http-equiv="X-UA-Compatible" content="IE=chrome">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Jazmin Fazzolari - Portfolio </title>    
+    <title> Jazmin Fazzolari - Portfolio </title>
     <link rel="stylesheet" href="style.css"> <!-- Link this document with 'style.css' -->
+    <script src="https://kit.fontawesome.com/9cd729a254.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body class="home" id="top">
     <div id="header">
         <div class="nav-bar">
+            <a href="#top" class="nav-item-link title">JAZMIN FAZZOLARI</a>
             <div class="nav-items">
-                <a href="#top" class="nav-item-link title">JAZMIN FAZZOLARI</a>
-                <nav>
-                        <a href="#projects" class="nav-item-link">PROJECTS</a>
-                        <a href="#about" class="nav-item-link">ABOUT ME</a>
-                        <a href="./assets/documents/JazminFazzolari_Resume.pdf" target="_blank" class="nav-item-link">RESUME</a>
-                        <a href="https://jazminfazzolari.carrd.co/" class="nav-item-link">CONTACT</a>
+                <nav id="nav-items">
+                    <a href="#projects" class="nav-item-link">PROJECTS</a>
+                    <a href="#about" class="nav-item-link">ABOUT ME</a>
                 </nav>
             </div>
             <ul class="nav-icons">
                 <a href="./assets/documents/JazminFazzolari_Resume.pdf" target="_blank">
-                <img class="nav-icon" src="./assets/images/icons/favicon_resume.png">
+                    <img class="nav-icon" src="./assets/images/icons/favicon_resume.png">
                 </a>
                 <a href="https://mistermew.itch.io/" target="_blank">
-                <img class="nav-icon" src="./assets/images/icons/favicon_itchio.png">
+                    <img class="nav-icon" src="./assets/images/icons/favicon_itchio.png">
                 </a>
                 <a href="https://github.com/MisterMew" target="_blank">
-                <img class="nav-icon" src="./assets/images/icons/favicon_github.png">
+                    <img class="nav-icon" src="./assets/images/icons/favicon_github.png">
                 </a>
             </ul>
+            <div class="nav-dropdown">
+                <i class="fa-solid fa-bars" style="font-size:48px;color:white;"></i>
+                <div class="nav-dropdown-content">
+                    <ul class="nav-icons" id="dropdown-icons">
+                        <a href="./assets/documents/JazminFazzolari_Resume.pdf" target="_blank">
+                            <img class="nav-icon" src="./assets/images/icons/favicon_resume.png">
+                        </a>
+                        <a href="https://mistermew.itch.io/" target="_blank">
+                            <img class="nav-icon" src="./assets/images/icons/favicon_itchio.png">
+                        </a>
+                        <a href="https://github.com/MisterMew" target="_blank">
+                            <img class="nav-icon" src="./assets/images/icons/favicon_github.png">
+                        </a>
+                        <a href="https://www.linkedin.com/in/jazmin-fazzolari-26540b227/" target="_blank">
+                            <img class="nav-icon" src="./assets/images/icons/favicon_linkedin.png">
+                        </a>
+                        <a href="#" target="_blank">
+                            <img class="nav-icon" src="./assets/images/icons/favicon_email.png">
+                        </a>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -40,9 +61,10 @@
     <section class="section-hero main" id="hero">
         <div class="section-container hero">
             <h1>JAZMIN FAZZOLARI</h1>
+            <p class="headline">VIDEO GAME PROGRAMMER & DESIGNER</p>
             <p class="p-decor">‿︵ ◇ ︵‿</p>
-            <p class="p-hero">Long time gamer turned game programmer and designer.
-                <br>I have an advanced diploma in game development and a strong commitment to my work!
+            <p class="p-hero">Long time gamer, passionate about game programming and designing.
+                <br>I have an Advanced Diploma in game development and a strong commitment to my work!
             </p>
         </div>
         <img class="section-divider" src="./assets/images/img_vectorSlope.svg">
@@ -69,11 +91,12 @@
                             <li>Project Management</li>
                         </div>
                         <div class="skills b">
-                            <li>Boids AI</li>
+                            <li>Boid AI</li>
                             <li>GUI Programming</li>
                             <li>Character Controllers</li>
+                            <li>Physics-based systems</li>
                         </div>
-                </div>
+                    </div>
                 </ul>
                 <ul>
                     <p>SOFTWARE</p>
@@ -103,13 +126,16 @@
                             ◇ Project Coordinator, GUI & Environment systems programmer
                         </p>
                         <p>
-                            The Heart of the Forest is a 2.5D adventure platformer for PC. 
+                            The Heart of the Forest is a 2.5D adventure platformer for PC.
                             <br>
-                            You play as a red-capped mushroom tasked by the Forest God to help save the forest from corruption by finding and returning the Heart of the Forest before the corruption takes over.
+                            You play as a red-capped mushroom tasked by the Forest God to help save the forest from
+                            corruption by finding and returning the Heart of the Forest before the corruption takes
+                            over.
                         </p>
                         <div class="procard-buttons">
                             <a href="pages/project_hotf.html" class="button">read more</a>
-                            <a href="https://littleredcap-studio.itch.io/heart-of-the-forest" class="button">download</a>
+                            <a href="https://littleredcap-studio.itch.io/heart-of-the-forest"
+                                class="button">download</a>
                         </div>
                     </div>
                 </div>
@@ -139,7 +165,7 @@
                         <p class="procard-details">
                             2021 | TEAM
                             <br>
-                            ◇ Project Coordinator, GUI & Audio programmer 
+                            ◇ Project Coordinator, GUI & Audio programmer
                         </p>
                         <p>A 2.5D top-down, bullet hell. Fight waves of enemies and defeat the goblin king!</p>
                         <div class="procard-buttons">
@@ -198,12 +224,12 @@
     </section>
     -->
 
-    
+
 
     <section class="section-container">
         <br><a href="#top" class="toTop"> back to top </a>
     </section>
-    
+
     <script src="index.js"></script>
 </body>
 
