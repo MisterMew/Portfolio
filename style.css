@@ -87,6 +87,17 @@ p.bullet {
     font-size: 1.1rem;
     font-weight: 400;
 }
+p.p-decor {
+    margin-bottom: 1rem;
+
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 100;
+
+    background: -webkit-linear-gradient(#ff9700 50%, #d72762);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 p.p-hero {
     text-align: center;
 }
@@ -118,8 +129,6 @@ li.bullet::before {
 
 /* DIVIDERS */
 div.row {
-    margin: 3rem 0;
-
     display: flex;
     justify-content: space-evenly;
     flex: 1 0 auto;
@@ -232,6 +241,11 @@ body {
     background-color: rgb(28, 26, 23);
     border: solid #000 16px;
     border-top: none;
+}
+@media (max-width: 980px) {
+    body {
+        width: 100vw;
+    }
 }
 
 .button {
@@ -363,6 +377,9 @@ nav {
     background-position: center;
     background-size: cover;
 }
+.section-container.hero h1 {
+    margin: 0;
+}
 .hero-background {
     position: relative;
     height: 100%;
@@ -415,6 +432,8 @@ nav {
 
 /* SECTION: SKILLS */
 .section-skills {
+    padding: 3rem 0;
+
     width: 100%;
     height: auto;
 
@@ -422,7 +441,24 @@ nav {
     justify-content: center;
 
     background-color: #000;
+}
+.row ul p{
     text-align: center;
+}
+.row ul li{
+    text-align: center;
+}
+.skills.a {
+    margin-right: 1.5rem;
+}
+.skills.a li {
+    text-align: right;
+}
+.skills.b {
+    margin-left: 1.5rem;
+}
+.skills.b li {
+    text-align: left;
 }
 
 
@@ -569,7 +605,4 @@ a.toTop {
     font-size: 1.5rem;
     font-variant: small-caps;
     text-align: center;
-}
-section.section-container {
-    background-color: #000;
 }
