@@ -87,7 +87,8 @@ p.date {
     text-transform: uppercase;
 }
 
-p.bullet {
+p:before.bullet {
+    content: '» ';
     color: #ff9700;
     font-size: 1.1rem;
     font-weight: 400;
@@ -313,17 +314,6 @@ body {
     background-image: linear-gradient(180deg, #000, #000 67%, rgba(0, 0, 0, 0.27) 94%, transparent);
 }
 
-.nav-items {
-    width: 100%;
-    display: flex;
-    align-self: center;
-    align-items: center;
-    justify-content: flex-start;
-}
-.nav-items.dropdown{
-    display: none;
-}
-
 .nav-icons {
     flex: 0 0 auto;
     width: auto;
@@ -343,6 +333,14 @@ nav {
     align-items: flex-start;
 }
 
+
+.nav-items {
+    width: 100%;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: flex-start;
+}
 .nav-item-link {
     cursor: pointer;
     width: auto;
@@ -353,20 +351,21 @@ nav {
     text-decoration: none;
     text-transform: uppercase;
 }
-
 .nav-item-link.title {
+    display: flex;
+    align-items: center;
     min-width: max-content;
 
     font-size: 1.25rem;
     font-weight: 600;
     margin-right: 2rem;
 }
-
 .nav-item-link::after {
     text-decoration: none;
     font-size: 18px;
 }
 
+.nav-items.dropdown, 
 .nav-dropdown {
     display: none;
 }
@@ -662,6 +661,7 @@ a.toTop {
 
 
 
+.show { display: inline; }
 
 @media(max-width: 1200px) {
     .projects-previous {
@@ -688,19 +688,14 @@ a.toTop {
     .nav-bar {
         display: space-between;
     }
-    .nav-items {
-        display: none;
-    }
+    .nav-items,
     .nav-icons {
         display: none;
     }
-    #dropdown-icons {
-        display: block;
-    }
+    #dropdown-icons,
     .nav-icons.dropdown-content {
         display: block;
     }
-
     .nav-dropdown {
         position: relative;
         display: inline;
@@ -733,9 +728,15 @@ a.toTop {
         margin: 1rem;
     }
 
+    /* Navigation */
     .nav-bar {
         padding: 32px 0;
     }
+    .nav-dropdown i {
+        margin: 0 2rem;   
+    }
+
+    /* Hero */
     .section-hero {
         height: 100vh;
         background-size: auto;
@@ -744,6 +745,8 @@ a.toTop {
         font-size: 3rem;
         margin: 1rem 0;
     }
+
+    /* Skills */
     div.row {
         flex-direction: column;
     }

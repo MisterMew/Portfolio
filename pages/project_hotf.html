@@ -138,10 +138,31 @@
             <div class="topic">
                 <h3>ABOUT THE CODE</h3>
                 <div class="topic-row">
-                    <img src="https://i.redd.it/uy987vxdzci81.png">
+                    <div>
+                        <img src="https://i.redd.it/uy987vxdzci81.png">
+                    </div>
                     <div>
                         <h4>Platforming Systems</h4>
-                        <p></p>
+                        <h5>PLAYER HEALTH</h5>
+                        <p>
+                            The player’s health was quickly set up, but served as the core functionality anyway. The lives were stored as an integer and controlled/clamped in Update() based on the maxLives variable - that way designers could easily test and configure what was best. The functions that Add, Remove, and Restore lives were all simply modifying the currentLives variable.
+                        </p>
+                        <br><br>
+                        <h5>POISON AND SAP</h5>
+                        <p>
+                        </p>
+                        <pre><code>
+                            private void OnTriggerStay2D(Collider2D contact)
+                            {
+                                if (contact.gameObject.tag != "Player") { return; }
+                    
+                                playerHealth = contact.GetComponent<PlayerHealth>();             //Get the player health class
+                                playerHealth.RemoveLives(damageDealt, PlayerDamageType.Poison); //Remove lives from player
+                    
+                                if (playerHealth.CurrentLives <= 0 && playerHealth.DropHeartFragOnDeath)
+                                    MakePlayerDropHeartFragment(contact.gameObject);
+                            }
+                        </code></pre>
                     </div>
                 </div>
                 <div class="topic-row">
