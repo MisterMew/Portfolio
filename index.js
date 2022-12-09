@@ -1,6 +1,8 @@
 
 $(document).ready(function () {
 
+    var versionNumber = "version | 1.0.10"
+
     /* ABOUT ME: TABS */
     ///On Function Click
     $(".aboutme-tab-links").click(function () {

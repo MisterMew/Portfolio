@@ -270,12 +270,40 @@ private IEnumerator LerpWithSize(Vector3 startSize, Vector3 endSize, float speed
                 </div>
                 <p class="hr">︵ ◇ ︵</p>
                 <div class="topic-row">
-                    <img src="../assets/images/projects/hotf/hotf_GUI.png">
+                    <div>
+                        <img src="../assets/images/projects/hotf/hotf_GUI.png">
+                        <img src="../assets/images/projects/hotf/hotf_guiOptionsGraphicsv2.png">
+                    </div>
                     <div>
                         <h4>User Interface</h4>
                         <p>
                             The UI took up a lot of time to do, updates to parent prefabs would often cause unwanted
                             issues and bugs that needed to be addressed quickly.
+                            <br><br>
+                            Setting up the functionality for every time a <b>button was pressed</b> was straightforward, only 
+                            requiring access to certain canvas elements and scene indexes to switch between them.
+                            <br>
+                            The entire options menu was a little bit differemt, in order to not repeat any code, I 
+                            had to <b>cache the most recent menu</b> that was opened, and then try to enable it when pressing 
+                            the back button within any of the <b>sub-options</b>.
+                        </p>
+                        <br><pre><code>
+private GameObject latestMenuCache = null; //Caches the last accessed/current menu
+
+public void ReturnToOptions()  {
+latestMenuCache.gameObject.SetActive(false); //Gets the cached menu
+menuManager.optionsMenuUI.SetActive(true);
+}
+                        </code></pre><br>
+                        <p>
+                            The most <b>challenging aspect</b> of the GUI was handling everything relating to the 
+                            <b>Graphics Settings</b>. I found it quite difficult trying to get the dropdowns and other elements
+                            to load and sync up with the realtime changes, as well as trying to make sure that the functionality
+                            was properly working.
+                            <br><br>
+                            Playing with these systems was a first, and I'm glad I took on the challenge because not only am I
+                            proud of my achievements, I also learnt quite a bit about the features Unity allows us to use in 
+                            relation to grapphics.
                         </p>
                     </div>
                 </div>
