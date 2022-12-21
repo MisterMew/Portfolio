@@ -3,8 +3,6 @@ To Do;
 
 > Add button hover effects to Navigation Bar
 > Add button hover effects to normal buttons
-> Populate Project: Fly-High with retrospective content
-> Populate Project: HotF with retrospective content
 > Change bg. gradient to flat colour w/ transparency, add gradient to titles only
 > Create about me section
 > Add email/contact icon

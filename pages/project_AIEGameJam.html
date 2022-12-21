@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF=8">
+    <meta http-equiv="X-UA-Compatible" content="IE=chrome">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Jazmin Fazzolari - The Heart of the Forest </title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<!-- BODY -->
+<body id="top">
+    <div id="header">
+        <!-- NAVIGATION -->
+        <div class="nav-bar">
+            <div class="nav-items">
+                <a href="#top" class="nav-item-link title">JAZMIN FAZZOLARI</a>
+                <nav>
+                    <a href="../index.html" class="nav-item-link">〈 HOME</a>
+                    <a href="#overview" class="nav-item-link">OVERVIEW</a>
+                    <a href="#aboutcode" class="nav-item-link">ABOUT CODE</a>
+                    <a href="#aboutmanage" class="nav-item-link">ABOUT MANAGEMENT</a>
+                </nav>
+            </div>
+            <ul class="nav-icons">
+                <a href="../assets/documents/JazminFazzolari_Resume.pdf" target="_blank">
+                    <img class="nav-icon" src="../assets/images/icons/favicon_resume.png">
+                </a>
+                <a href="https://mistermew.itch.io/" target="_blank">
+                    <img class="nav-icon" src="../assets/images/icons/favicon_itchio.png">
+                </a>
+                <a href="https://github.com/MisterMew" target="_blank">
+                    <img class="nav-icon" src="../assets/images/icons/favicon_github.png">
+                </a>
+            </ul>
+            <div class="nav-dropdown">
+                <i class="fa-solid fa-bars" style="font-size:48px;color:white;"></i>
+                <div class="nav-dropdown-content">
+                    <ul class="nav-icons" id="dropdown-icons">
+                        <a href="./assets/documents/JazminFazzolari_Resume.pdf" target="_blank">
+                            <img class="nav-icon" src="./assets/images/icons/favicon_resume.png">
+                        </a>
+                        <a href="https://mistermew.itch.io/" target="_blank">
+                            <img class="nav-icon" src="./assets/images/icons/favicon_itchio.png">
+                        </a>
+                        <a href="https://github.com/MisterMew" target="_blank">
+                            <img class="nav-icon" src="./assets/images/icons/favicon_github.png">
+                        </a>
+                        <a href="https://www.linkedin.com/in/jazmin-fazzolari-26540b227/" target="_blank">
+                            <img class="nav-icon" src="./assets/images/icons/favicon_linkedin.png">
+                        </a>
+                        <a href="#" target="_blank">
+                            <img class="nav-icon" src="./assets/images/icons/favicon_email.png">
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION: HERO -->
+    <section class="section-hero project" id="hero">
+        <img class="hero-background" src="../assets/images/projects/hotf/hotf_Banner.png">
+        <figcaption>
+            <h1>the heart of the forest</h1>
+            <p>The Heart of the Forest is a 2.5D adventure platformer for PC.
+                <br>
+                You play as a red-capped mushroom tasked by the Forest God to help save the forest from corruption by
+                finding and returning the Heart of the Forest before the corruption takes over.
+            </p>
+        </figcaption>
+    </section>
+
+    <!-- SECTION: RETROSPECTIVE -->
+    <section class="section-projects">
+        <div class="section-container">
+            <h2>RETROSPECTIVE</h2>
+            <div class="line-divider"></div>
+            <p class="date">December 09, 2022</p>
+            <div class="procard-buttons">
+                <a href="https://littleredcap-studio.itch.io/the-heart-of-the-forest" class="button">Download Game</a>
+            </div>
+            <!-- Section 1 -->
+            <div class="topic">
+                <h3>PROJECT DETAILS</h3>
+                <ul>
+                    <li class="bullet"><b>Engine:</b> Unity Engine v2020.3.5f1</li>
+                    <li class="bullet"><b>Target Platform:</b> PC (Windows)</li>
+                    <li class="bullet"><b>Duration:</b> 15 weeks</li>
+                    <li class="bullet"><b>Completion Date:</b> December 02, 2022</li>
+                </ul>
+            </div>
+
+            <hr id="overview">
+            <div class="topic">
+                <h3>OVERVIEW</h3>
+                <h4>Description</h4>
+                <p>
+                    The Heart of the Forest is a 2.5D adventure platformer about a little red-capped mushroom, who is
+                    tasked with finding all of the lost heart fragments and returning them to the forest god to prevent
+                    the corruption from taking over.
+                    <br>
+                    The player must explore different areas using their various abilities in order to find a singular
+                    heart fragment, and then return it to the village. Once all four fragments have been found, the game
+                    is complete.
+                </p>
+            </div>
+            <div class="topic">
+                <h4>Contributions</h4>
+                <div class="container-contributions">
+                    <ul>
+                        <p>PLATFORMING SYSTEMS (OBJECTS)</p>
+                        <li class="bullet">Rotating & moving platforms</li>
+                        <li class="bullet">Collapsing leaves</li>
+                        <li class="bullet">Two-way passable functionality</li>
+                        <li class="bullet">Poison & sap pools/puddles</li>
+                        <li class="bullet">Light sensitive glow mushrooms</li>
+                        <li class="bullet">Mushroom bounce pad</li>
+                    </ul>
+                    <ul>
+                        <p>USER INTERFACES (Design & systems)</p>
+                        <li class="bullet">Main Menu</li>
+                        <li class="bullet">Options Menu</li>
+                        <li class="bullet">In-game HUD & Dialogue</li>
+                        <li class="bullet">Pause Menu</li>
+                        <li class="bullet">Credits scene</li>
+                        <li class="bullet">Confirmation prompts</li>
+                    </ul>
+                    <br>
+                </div>
+            </div>
+
+            <!-- Section 2 -->
+            <hr id="aboutcode">
+            <div class="topic">
+                <h3>ABOUT THE CODE</h3>
+                <div class="topic-row">
+                    <div>
+                        <h4>Player Health</h4>
+                        <p>
+                            The <b>player’s health</b> was quickly set up, but served as the core functionality anyway.
+                            The lives were stored as an <b>integer</b> and controlled/clamped in <b>Update()</b> based
+                            on the <b>maxLivesvariable</b> - that way designers could easily test and configure what was
+                            best. Thefunctions that <b>Add, Remove, and Restore lives</b> were all simply modifying the
+                            currentLives variable.
+                        </p>
+
+                    </div>
+                </div>
+                <div class="topic-row">
+                    <img src="../assets/images/projects/hotf/hotf_goldSap.gif">
+                    <div>
+                        <h4>Poison and Sap</h4>
+                        <p>
+                            The <b>poison puddle</b> was incredibly simple, when a collision is detected, if it is the
+                            Player, then removes X amount of health. This gave the designers the ability to decide
+                            whether a poison puddle/pool was <b>instant death</b>, or <b>gradually deducts</b> from the
+                            player's health.
+                        </p>
+                        <br><pre><code>
+private void OnTriggerStay2D(Collider2D contact)
+{
+    if (contact.gameObject.tag != "Player") { return; }
+
+    playerHealth = contact.GetComponent&ltPlayerHealth&gt();             //Get the player health class
+    playerHealth.RemoveLives(damageDealt, PlayerDamageType.Poison); //Remove lives from player
+
+    if (playerHealth.CurrentLives &lt= 0 && playerHealth.DropHeartFragOnDeath)
+    MakePlayerDropHeartFragment(contact.gameObject);
+}
+                        </code></pre>
+                    </div>
+                </div>
+                <div class="topic-row">
+                    <div>
+                        <h4>Moving Platforms</h4>
+                        <p>
+                            The <b>moving platforms</b> were one of the more difficult systems. My idea was to create a
+                            <b>transit system</b> that takes in an <b>array of transform.position</b> for the
+                            <b>obj_platform</b> to move between. Simple enough. The complicated bits came with all the
+                            validation checks, making sure the platforms performed as intended when they were set to
+                            move autonomously or with player input, and then whether the player was grounded on them or
+                            not, as well as checking which point the platform is currently at and telling it whether to
+                            stop or keep going.
+                        </p>
+                    </div>
+                    <img src="../assets/images/projects/hotf/hotf_goldMoving.gif">
+                </div>
+                <div class="topic-row">
+                    <div>
+                        <h4>Rotating Blocks</h4>
+                        <p>
+                            Rotating blocks were nothing special, I simply tell the <b>target game object</b> to rotate
+                            using a Quaternion, using an integer variable representing the <b>degrees per second</b>. I 
+                            made sure to have a <b>boolean</b> that allows designers to choose if they want the platform
+                            rotate at a steady rate, or incrementally stopping.
+                        </p>
+                    </div>
+                    <img src="../assets/images/projects/hotf/hotf_goldRotating.gif">
+                </div>
+                <div class="topic-row">
+                    <img src="../assets/images/projects/hotf/hotf_goldBoucnePad.gif">
+                    <div>
+                        <h4>Bounce Pad</h4>
+                        <p>
+                            I had a lot of fun playing with the bounce pads and got to try a few different methods. I 
+                            found I got the best results by using a <b>raycast</b> between the player and the bounce pad
+                            to check for the <b>point of contact</b>, and then applying the actual bounce mechanic in the 
+                            direction of the bounce pad.
+                            <br>
+                            The player bounces <b>higher</b> with each bounce up to a certain point, and will have the 
+                            values resset when in contact with the ground. The <b>calculate force</b> is used with the 
+                            boucne direction to apply a <b>velocity</b> to the player. 
+                        </p>
+                        <br><pre><code>
+private void Bounce(Vector2 bounceDirection)
+{
+    tempBounceForce += bounceForceIncrement; //Multiplier that makes bouncing higher incrementally
+    tempBounceForce = Mathf.Clamp(tempBounceForce, 0, bounceMaxForce); //Clamp the bounce force
+
+    pRb.velocity = bounceDirection * (tempBounceForce * 2F); //Add velocity to the player
+}
+                        </code></pre>
+                    </div>
+                </div>
+                <div class="topic-row">
+                    <div>
+                        <h4>Two-way Passable</h4>
+                        <p>
+                            The system was created to be applied to any object and worked well with other systems.
+                            Every <b>Update()</b> there is a check to see if <b>playerOnPlatform == true</b> and if the 
+                            <b>down input</b> is triggered. If both conditions have been met, then the target platforms 
+                            collider is disabled and coroutine is called to re-enable the collider after 0.5 seconds.
+                            <br><br>
+                            I didn't run into any troubles with this method, the timing was perfect and no issues were 
+                            found, however I could seem to find a good way to apply pixel-correction when the player 
+                            collided with the corners of the platform. 
+                        </p>
+                    </div>
+                    <img src="../assets/images/projects/hotf/hotf_goldTwowayPassable.gif">
+                </div>
+                <div class="topic-row">
+                    <img src="../assets/images/projects/hotf/hotf_goldLightSensitive.gif">
+                    <div>
+                        <h4>Light Sensitive</h4>
+                        <p>
+                            The light sensitive <b>mushroom platforms</b> consist of two basic functions: <b>grow</b>
+                            and <b>shrink</b>. In the gif, you can see the two variations and how they respond
+                            differently depending on the player's <b>glow ability</b>.
+                            <br>
+                            The base of the platforms (<i>mushroom stem</i>) will respond when contact with light is
+                            <b>entered</b> or <b>exited</b>, and begin a coroutine which grows/shrinks them, and disables
+                            the collider when shrunk.
+                        </p>
+                        <br><pre><code>
+private IEnumerator LerpWithSize(Vector3 startSize, Vector3 endSize, float speed) {
+    lerpTime = 0F;
+    while (lerpTime &lt 1F) {
+        meshParent.localScale = Vector3.Lerp(startSize, endSize, lerpTime);
+
+        lerpTime += Time.deltaTime * speed; //Apply speed
+        yield return null;
+    }
+    meshParent.localScale = endSize;
+}
+                        </code></pre>
+                    </div>
+                </div>
+                <p class="hr">︵ ◇ ︵</p>
+                <div class="topic-row">
+                    <div>
+                        <img src="../assets/images/projects/hotf/hotf_GUI.png">
+                        <img src="../assets/images/projects/hotf/hotf_guiOptionsGraphicsv2.png">
+                    </div>
+                    <div>
+                        <h4>User Interface</h4>
+                        <p>
+                            The UI took up a lot of time to do, updates to parent prefabs would often cause unwanted
+                            issues and bugs that needed to be addressed quickly.
+                            <br><br>
+                            Setting up the functionality for every time a <b>button was pressed</b> was straightforward, only 
+                            requiring access to certain canvas elements and scene indexes to switch between them.
+                            <br>
+                            The entire options menu was a little bit differemt, in order to not repeat any code, I 
+                            had to <b>cache the most recent menu</b> that was opened, and then try to enable it when pressing 
+                            the back button within any of the <b>sub-options</b>.
+                        </p>
+                        <br><pre><code>
+private GameObject latestMenuCache = null; //Caches the last accessed/current menu
+
+public void ReturnToOptions()  {
+latestMenuCache.gameObject.SetActive(false); //Gets the cached menu
+menuManager.optionsMenuUI.SetActive(true);
+}
+                        </code></pre><br>
+                        <p>
+                            The most <b>challenging aspect</b> of the GUI was handling everything relating to the 
+                            <b>Graphics Settings</b>. I found it quite difficult trying to get the dropdowns and other elements
+                            to load and sync up with the realtime changes, as well as trying to make sure that the functionality
+                            was properly working.
+                            <br><br>
+                            Playing with these systems was a first, and I'm glad I took on the challenge because not only am I
+                            proud of my achievements, I also learnt quite a bit about the features Unity allows us to use in 
+                            relation to grapphics.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <hr id="aboutmanage">
+            <div class="topic">
+                <h3>ABOUT THE COORDINATION</h3>
+                <h4>Coordinating the Project</h4>
+                <p>
+                    I was allocated the team Project Coordinator. It was an interesting experience and I learnt alot 
+                    about how to handle individuals within each discpline, as well as what it means to actually fill
+                    the role. 
+                    <br>
+                    I made sure to keep on top of documentation, including writing out meeting agendas and
+                    notes for the team to follow.
+                    <br>
+                    Keeping up to date with what everyone was doing while also not getting to involved in every 
+                    discipline was also a challenge, I did catch myself needing to step back on occaision to give
+                    others the opportunity to work things out independantly. Unfortunely, I did have to take some major
+                    risks during the 7th week of development, the level design simply wasn't past its drawing stages
+                    and the rest of the team being notciably upset with the lack of progress - I managed to step in and
+                    guide the designers down a different path which ultimately worked - the result is the one that has 
+                    made it into the final game.
+                    <br><br>
+                    Generally speaking, the role of Project Coordinator was challenging but incredibly rewarding, I would
+                    love to fill those shoes again someday to gain even more experience and help others look at things
+                    from a different perspective.
+                </p>
+
+                <p class="hr">︵ ◇ ︵</p>
+
+                <div class="topic-row">
+                    <img src="../assets/images/projects/hotf/hotf_itchpage.png">
+                    <div>
+                        <h4>Itch.io</h4>
+                        <p>I helped with some of the design for the Itch.io page, using custom CSS to alter some of the
+                            pages elements. The background was a difficult task as it consisted of two separate images
+                            that had to be set and calculated to dynamically adjust with the pages resolution, and the
+                            hover effect when the mouse is over the images, were the major visual tweaks I had done.
+                        </p>
+                    </div>
+                </div>
+                <div class="topic-row">
+                    <img src="../assets/images/projects/hotf/hotf_trello.png">
+                    <div>
+                        <h4>Trello Task Management</h4>
+                        <p>
+                            I created all the trello boards for the team at the beginning of alpha. I set up tags and
+                            colour coded each discipline to help with organisation, automated certain cards so that tags
+                            are automatically added when a card is created or moved, and also linked important documents
+                            and created a submission checklist that can always be referred back to.
+                            <br>
+                            I contributed to a lot of the maintenance within the _Major Production: Main Board and the
+                            Programming Board, but don’t deserve all the credit. The programmers all did their share of
+                            maintaining the programming board.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="img-focused" id="focusedImageBox">
+                <div class="modal-content">
+                    <img id="focusedImage" src="../assets/images/img_fernBlack-unslpash.jpg">
+                </div>
+            </div>
+            <h3>IMAGE GALLERY</h3>
+            <div class="gallery">
+                <img class="openFocusedImage" src="../assets/images/projects/hotf/highlight_02.png">
+                <img class="openFocusedImage" src="../assets/images/projects/hotf/highlight_03.png">
+                <img class="openFocusedImage" src="../assets/images/projects/hotf/highlight_04.png">
+
+                <img class="openFocusedImage" src="../assets/images/projects/hotf/highlight_08.png">
+                <img class="openFocusedImage" src="../assets/images/projects/hotf/highlight_09.png">
+                <img class="openFocusedImage" src="../assets/images/projects/hotf/highlight_10.png">
+
+                <img class="openFocusedImage" src="../assets/images/projects/hotf/highlight_11.png">
+                <img class="openFocusedImage" src="../assets/images/projects/hotf/highlight_12.png">
+                <img class="openFocusedImage" src="../assets/images/projects/hotf/highlight_13.png">
+
+                <img class="openFocusedImage" src="../assets/images/projects/hotf/hotf_enemiespicnic.gif">
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- FOOTER -->
+    <footer>
+        <p>Site by Jazmin Fazzolari</p>
+        <br><a href="#top" class="toTop"> back to top </a>
+        <p class="version">Version 1.0.9</p>
+    </footer>
+
+    <script src="../index.js"></script>
+</body>
+
+</html>
