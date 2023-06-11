@@ -29,6 +29,7 @@ h1 {
     font-weight: 300;
     line-height: 1;
     text-align: center;
+    text-shadow: 2px 2px 8px #342f29;
 
     margin-bottom: 3rem;
 }
@@ -412,7 +413,7 @@ nav {
     align-items: center;
     position: relative;
 
-    background-image: url(assets/images/img_fernBlack-unslpash.jpg);
+    background-image: url(assets/images/img_skyrimDragonsBridge.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -423,21 +424,18 @@ nav {
 .section-container.hero h1 {
     margin: 0;
 }
-
 .hero-background {
     position: relative;
     width: 100vw;
 }
 
+/* Hero project*/
 .section-hero.project {
     margin-top: 5rem;
     transition: 0.3s;
 
     overflow: hidden;
 }
-
-
-
 .section-hero.project.noblur img {
     filter: blur(0px);
 }
