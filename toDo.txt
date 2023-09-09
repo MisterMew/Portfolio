@@ -6,6 +6,7 @@ To Do;
 > Change bg. gradient to flat colour w/ transparency, add gradient to titles only
 > Create about me section
 > Add email/contact icon
+> Change project tabs to be same width as home page (show background diagonals)
 
 
 
@@ -13,3 +14,12 @@ Bugs;
 
 > Not compatible with some media queries yet
 > View full image is still broken
+
+
+References;
+> http://www.arashshirazi.co.uk/
+> https://www.davidshaver.net/index.html
+> https://gael-baurens.fr/
+> https://www.jackbromhead.com/
+> https://heathsmith.net/index.php/portfolio/
+> https://hugo.fyi/#   <-- just the tags for projects

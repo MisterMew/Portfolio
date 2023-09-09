@@ -443,10 +443,6 @@ nav {
     transition: 0.3s;
     filter: blur(3px);
 }
-.section-hero.project:hover img {
-    transition: 0.3s;
-    filter: blur(0px);
-}
 .section-hero figcaption {
     position: absolute;
     left: 0;
@@ -469,11 +465,6 @@ nav {
 .section-hero.project p {
     transition: 0.3s;
     text-align: center;
-}
-.section-hero.project:hover h1, 
-.section-hero.project:hover p {
-    transition: 0.3s;
-    opacity: 0;
 }
 
 
